@@ -1,0 +1,16 @@
+{  
+    "service": { 
+      "id": "bear",   
+      "name": "bearbear",  
+      "tags": ["dev", "0.0.1"],  
+      "address": "",  
+      "port": 8080,
+      "checks": [  
+        {  
+            "http": "http://127.0.0.1:8080/ping",
+            "interval": "30s"
+        } 
+      ]  
+    }  
+  }  
+  

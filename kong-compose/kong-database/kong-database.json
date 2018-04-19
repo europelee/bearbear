@@ -1,0 +1,16 @@
+{  
+    "service": { 
+      "id": "kong-database",   
+      "name": "kong-database",  
+      "tags": ["dev"],  
+      "address": "",  
+      "port": 5432,
+      "checks": [  
+        {  
+            "args": ["pg_isready", "-U", "postgres"],
+            "interval": "30s"
+        } 
+      ]  
+    }  
+  }  
+  

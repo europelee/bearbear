@@ -1,0 +1,16 @@
+{  
+    "service": { 
+      "id": "kong",   
+      "name": "kong",  
+      "tags": ["dev"],  
+      "address": "",  
+      "port": 8001,
+      "checks": [  
+        {  
+            "http": "http://localhost:8001/status",
+            "interval": "30s"
+        } 
+      ]  
+    }  
+  }  
+  
