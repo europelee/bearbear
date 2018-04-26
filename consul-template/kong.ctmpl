@@ -1,0 +1,1 @@
+dns_resolver={{ keyOrDefault "service/kong/dns_resolver" "127.0.0.11" }}

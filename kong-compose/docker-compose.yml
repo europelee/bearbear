@@ -42,13 +42,13 @@ services:
       - KONG_CASSANDRA_CONTACT_POINTS=kong-database
     networks:
       - kongnet        
-    expose:
-      - 8000
-      - 8001
-      - 8443
-      - 8444
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8443:8443"
+      - "8444:8444"
     healthcheck:
-      test: ["CMD-SHELL", "curl -I -s -L http://127.0.0.1:8000 || exit 1"]
+      test: ["CMD-SHELL", "curl -I -s -L http://127.0.0.1:8001/status || exit 1"]
       interval: 25s
       retries: 10
 
