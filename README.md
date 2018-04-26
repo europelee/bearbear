@@ -8,6 +8,7 @@ docker-compose up
 
 2. start bearbear app 
 cd <bearbear_path>/  
+docker build -t europeli/bearbear:0.0.1 -f Dockerfile .  
 docker run -p 8080:8080 --network consul_bearnet -d europeli/bearbear:0.0.1
 
 3. start kong  
