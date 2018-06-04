@@ -8,9 +8,11 @@ RUN mkdir -p /var/log/supervisor
 RUN mkdir /etc/consul.d
 ADD supervisord.conf /etc/supervisord.conf
 COPY --from=consul:1.0.6 /bin/consul      /usr/local/bin
+COPY --from=hashicorp/consul-template:alpine /bin/consul-template   /usr/local/bin
 COPY kong.json /etc/consul.d/
 
-WORKDIR /etc/kong
-COPY kong.conf .
+COPY kong_conf.ctmpl /tmp
+# WORKDIR /etc/kong
+# COPY kong.conf .
 
 CMD ["/usr/bin/supervisord"]

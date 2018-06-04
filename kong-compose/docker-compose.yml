@@ -41,7 +41,9 @@ services:
       - KONG_ADMIN_LISTEN_SSL=0.0.0.0:8444
       - KONG_CASSANDRA_CONTACT_POINTS=kong-database
     networks:
-      - kongnet        
+      - kongnet
+    volumes:
+      - /tmp/:/etc/kong/    
     ports:
       - "8000:8000"
       - "8001:8001"
