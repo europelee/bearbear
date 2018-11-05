@@ -1,4 +1,4 @@
-FROM kong:0.13.0
+FROM kong:0.14.1
 
 RUN apk --no-cache add ca-certificates supervisor dnsmasq curl
 RUN echo 'conf-dir=/etc/dnsmasq.d/,*.conf' > /etc/dnsmasq.conf

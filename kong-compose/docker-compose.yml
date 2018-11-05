@@ -14,7 +14,7 @@ services:
       timeout: 5s
       retries: 5
   kong-migration:
-    image: kong:0.13.0
+    image: kong:0.14.1
     depends_on:
       kong-database:
         condition: service_healthy
@@ -43,7 +43,8 @@ services:
     networks:
       - kongnet
     volumes:
-      - /tmp/:/etc/kong/    
+      - /tmp/:/etc/kong/
+      - /eu/quantil/:/opt/quantil/
     ports:
       - "8000:8000"
       - "8001:8001"
