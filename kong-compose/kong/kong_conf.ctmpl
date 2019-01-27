@@ -1,2 +1,4 @@
+plugins = bundled
+log_level = debug
 dns_resolver={{ keyOrDefault "service/kong/dns_resolver" "127.0.0.11" }}
 dns_order={{ keyOrDefault "service/kong/dns_order" "LAST,SRV,A,CNAME" }}
