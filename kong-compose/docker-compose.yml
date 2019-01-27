@@ -44,7 +44,7 @@ services:
       - kongnet
     volumes:
       - /tmp/:/etc/kong/
-      - /eu/quantil/:/opt/quantil/
+      - /Users/europelee/workspace/projects/:/opt/projects/
     ports:
       - "8000:8000"
       - "8001:8001"

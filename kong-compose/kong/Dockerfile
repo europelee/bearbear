@@ -1,6 +1,6 @@
 FROM kong:0.14.1
 
-RUN apk --no-cache add ca-certificates supervisor dnsmasq curl
+RUN apk --update --no-cache add ca-certificates supervisor dnsmasq curl
 RUN echo 'conf-dir=/etc/dnsmasq.d/,*.conf' > /etc/dnsmasq.conf
 RUN echo "user=root" >> /etc/dnsmasq.conf
 RUN echo "server=/consul/127.0.0.1#8600" > /etc/dnsmasq.d/consul.conf
